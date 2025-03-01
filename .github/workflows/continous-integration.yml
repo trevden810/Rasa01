@@ -587,7 +587,7 @@ jobs:
 
       - name: Get backend coverage reports
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/download-artifact@v4 #v4.1.8
+        uses: actions/download-artifact@v4.1.9 #v4.1.8
         with:
           path: ${{ github.workspace }}/tests_coverage
           pattern: "*-coverage"
