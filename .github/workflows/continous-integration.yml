@@ -132,7 +132,7 @@ jobs:
 
       - name: Install poetry 🦄
         if: needs.changes.outputs.backend == 'true'
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: ${{ env.POETRY_VERSION }}
           virtualenvs-create: true
@@ -276,7 +276,7 @@ jobs:
 
       - name: Install poetry (Ubuntu) 🦄
         if: needs.changes.outputs.backend == 'true' && matrix.os == 'ubuntu-24.04'
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: ${{ env.POETRY_VERSION }}
           virtualenvs-create: true
@@ -445,7 +445,7 @@ jobs:
 
       - name: Install poetry (Ubuntu) 🦄
         if: needs.changes.outputs.backend == 'true' && matrix.os == 'ubuntu-24.04'
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: ${{ env.POETRY_VERSION }}
           virtualenvs-create: true
@@ -689,7 +689,7 @@ jobs:
 
       - name: Install poetry 🦄
         if: needs.changes.outputs.backend == 'true'
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: ${{ env.POETRY_VERSION }}
           virtualenvs-create: true
@@ -779,7 +779,7 @@ jobs:
 
       - name: Install poetry 🦄
         if: needs.changes.outputs.backend == 'true'
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: ${{ env.POETRY_VERSION }}
           virtualenvs-create: true
@@ -890,7 +890,7 @@ jobs:
 
       - name: Install poetry 🦄
         if: needs.changes.outputs.backend == 'true'
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: ${{ env.POETRY_VERSION }}
           virtualenvs-create: true
@@ -1252,7 +1252,7 @@ jobs:
         shell: bash
 
       - name: Install poetry 🦄
-        uses: snok/install-poetry@93ada01c735cc8a383ce0ce2ae205a21c415379b
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: ${{ env.POETRY_VERSION }}
           virtualenvs-create: true
