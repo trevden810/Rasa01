@@ -52,7 +52,7 @@ jobs:
       docs: ${{ steps.changed-files.outputs.docs || steps.run-all.outputs.docs }}
       is_pre_release_version: ${{ steps.rasa_check_version_type.outputs.is_pre_release_version }}
     steps:
-      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50
         # Run the normal filters if the all-tests-required label is not set
         id: changed-files
@@ -116,7 +116,7 @@ jobs:
     steps:
       - name: Checkout git repository 🕝
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON_VERSION }} 🐍
         if: needs.changes.outputs.backend == 'true'
@@ -212,7 +212,7 @@ jobs:
 
     steps:
       - name: Checkout git repository 🕝
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Assert release includes all changelog entries
         # check changelog folder only when we create pull request preparing release
@@ -260,7 +260,7 @@ jobs:
 
       - name: Checkout git repository 🕝
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Set up Python ${{ matrix.python-version }} 🐍
         if: needs.changes.outputs.backend == 'true'
@@ -429,7 +429,7 @@ jobs:
 
       - name: Checkout git repository 🕝
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Set up Python ${{ matrix.python-version }} 🐍
         if: needs.changes.outputs.backend == 'true'
@@ -578,7 +578,7 @@ jobs:
     steps:
       - name: Checkout git repository 🕝
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Set up Python 3.10 🐍
         uses: actions/setup-python@57ded4d7d5e986d7296eab16560982c6dd7c923b
@@ -673,7 +673,7 @@ jobs:
     steps:
       - name: Checkout git repository 🕝
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON_VERSION }} 🐍
         if: needs.changes.outputs.backend == 'true'
@@ -763,7 +763,7 @@ jobs:
     steps:
       - name: Checkout git repository 🕝
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON_VERSION }} 🐍
         if: needs.changes.outputs.backend == 'true'
@@ -874,7 +874,7 @@ jobs:
     steps:
       - name: Checkout git repository 🕝
         if: needs.changes.outputs.backend == 'true'
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON_VERSION }} 🐍
         if: needs.changes.outputs.backend == 'true'
@@ -961,13 +961,13 @@ jobs:
       # to checkout HEAD commit for a pull request.
       # More details: https://github.com/actions/checkout/issues/299
       - name: Checkout pull request HEAD commit instead of merge commit 🕝
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         if: github.event_name == 'pull_request'
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Checkout git repository 🕝
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         if: github.event_name != 'pull_request'
 
       - name: Set up QEMU
@@ -1146,13 +1146,13 @@ jobs:
       # to checkout HEAD commit for a pull request.
       # More details: https://github.com/actions/checkout/issues/299
       - name: Checkout pull request HEAD commit instead of merge commit 🕝
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         if: github.event_name == 'pull_request'
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Checkout git repository 🕝
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         if: github.event_name != 'pull_request'
 
       - name: Set up QEMU
@@ -1239,7 +1239,7 @@ jobs:
 
     steps:
       - name: Checkout git repository 🕝
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Set up Python 3.9 🐍
         uses: actions/setup-python@57ded4d7d5e986d7296eab16560982c6dd7c923b
